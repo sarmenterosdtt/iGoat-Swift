@@ -29,6 +29,7 @@ jobs:
         
     - name: Install cyclonedx
       run: |
+        gem update --system
         gem install cyclonedx-cocoapods
         
     - name: run cyclonedx
