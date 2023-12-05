@@ -29,16 +29,16 @@ jobs:
         
     - name: Install cyclonedx
       run: |
-        pod install
+  
         gem install cyclonedx-cocoapods
         
     - name: run cyclonedx
       run: |
-        cd iGoat-Swift
+        cd lib/cyclonedx/cocoapods
         cyclonedx-cocoapods --path . --output bom.xml --version 6 
         
     - name: Upload cyclonedx Scan Results
       uses: actions/upload-artifact@v2
       with:
         name: cyclonedx-results
-        path: iGoat-Swift/bom.xml
+        path: lib/cyclonedx/cocoapods/bom.xml
