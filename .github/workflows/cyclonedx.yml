@@ -34,7 +34,7 @@ jobs:
     - name: run cyclonedx
       run: |
         cd iGoat-Swift
-        cyclonedx-cocoapods . --output bom.xml --version 6 
+        cyclonedx-cocoapods --path . --output bom.xml --version 6 
         
     - name: Upload cyclonedx Scan Results
       uses: actions/upload-artifact@v2
