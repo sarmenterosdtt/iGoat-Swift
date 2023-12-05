@@ -32,7 +32,8 @@ jobs:
         
     - name: run syft
       run: |
-        syft iGoat-Swift -o cyclonedx-json=sbom_cyclonedx.json
+        cd iGoat-Swift
+        syft . -o cyclonedx-json=sbom_cyclonedx.json
         
     - name: Upload Syft Scan Results
       uses: actions/upload-artifact@v2
