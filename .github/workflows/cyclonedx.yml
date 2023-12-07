@@ -34,6 +34,7 @@ jobs:
         
     - name: run cyclonedx
       run: |
+        cd iGoat-Swift
         ls
         cyclonedx-cocoapods --path . --output bom.xml
         
