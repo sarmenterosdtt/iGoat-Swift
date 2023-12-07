@@ -34,7 +34,7 @@ jobs:
         
     - name: run cyclonedx
       run: |
-        
+        ls
         cyclonedx-cocoapods --path . --output bom.xml
         
     - name: Upload Syft Scan Results
