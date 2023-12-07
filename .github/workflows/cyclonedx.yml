@@ -35,7 +35,7 @@ jobs:
     - name: run cyclonedx
       run: |
         cd iGoat-Swift
-        pod add-cdn trunk https://cdn.cocoapods.org
+        pod install --clean-install
         ls
         cyclonedx-cocoapods --path . --output bom.xml
         
