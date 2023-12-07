@@ -29,13 +29,13 @@ jobs:
         
     - name: Install cyclonedx
       run: |
-        cd iGoat-Swift
+       
         gem install cyclonedx-cocoapods
         
     - name: run cyclonedx
       run: |
         cd iGoat-Swift
-        pod update
+        
         ls
         cyclonedx-cocoapods --path . --output bom.xml
         
