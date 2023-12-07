@@ -34,7 +34,7 @@ jobs:
         
     - name: run cyclonedx
       run: |
-        cd iGoat-Swift
+        
         pod install
         cyclonedx-cocoapods --path iGoat-Swift --output bom.xml --version 6 
         
