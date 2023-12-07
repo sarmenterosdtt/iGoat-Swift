@@ -34,9 +34,7 @@ jobs:
         
     - name: run cyclonedx
       run: |
-        
-        pod install
-        cyclonedx-cocoapods --path iGoat-Swift --output bom.xml --version 6 
+        cyclonedx-cocoapods --path iGoat-Swift --output bom.xml
         
     - name: Upload Syft Scan Results
       uses: actions/upload-artifact@v2
