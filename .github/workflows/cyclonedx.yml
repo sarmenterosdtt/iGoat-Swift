@@ -10,7 +10,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
+  scan:
 
     runs-on: ubuntu-latest
 
@@ -36,7 +36,7 @@ jobs:
       run: |
         cd iGoat-Swift
         ls
-        cyclonedx-cocoapods --path ./Podfile.lock --output bom.xml
+        cyclonedx-cocoapods --path --output bom.xml
         
     - name: Upload Syft Scan Results
       uses: actions/upload-artifact@v2
