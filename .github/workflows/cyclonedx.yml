@@ -30,7 +30,7 @@ jobs:
     - name: Install cyclonedx
       run: |
        
-        gem install cyclonedx-cocoapods
+        % gem install cyclonedx-cocoapods
         
     - name: run cyclonedx
       run: |
