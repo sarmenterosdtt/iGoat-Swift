@@ -36,10 +36,11 @@ jobs:
       run: |
         cd iGoat-Swift
         ls
-        cyclonedx-cocoapods --path --output bom.xml
+        pod cyclonedx-cocoapods iGoat-Swift.xcodeproj --output MyProject.bom.xml
+       
         
     - name: Upload Syft Scan Results
       uses: actions/upload-artifact@v2
       with:
-        name: syft-results
-        path: iGoat-Swift/sbom_cyclonedx.json
+        name: cyclonedx-results
+        path: bom.xml
