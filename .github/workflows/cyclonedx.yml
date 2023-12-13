@@ -36,7 +36,7 @@ jobs:
       run: |
         cd iGoat-Swift
         ls
-        cyclonedx-cocoapods iGoat-Swift.xcodeproj --output MyProject.bom.xml
+        cyclonedx-cocoapods Podfile.lock --output MyProject.bom.xml
        
         
     - name: Upload Syft Scan Results
